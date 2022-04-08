@@ -239,6 +239,7 @@ def process_ortho_data(cpt_code,Train = True):
 #now for the fun part
 #feel free to adjust the hyperparameters within the function
 #this will return optimal hyperparameters after bayesian optimization
+#This optimization section is modified from some open source code originally appearing here: https://ayguno.github.io/curious/portfolio/bayesian_optimization.html
 def optimized_data(inputs_NSQIP,targets_train,rand_points=40,search_number=40):
 
     def xgboost_bayesian(max_depth,learning_rate,colsample_bytree, min_child_weight,reg_alpha,gamma):
